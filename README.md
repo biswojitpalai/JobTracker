@@ -70,10 +70,9 @@ npm run dev
 - Log in securely with JWT authentication
 
 ### 📌 Managing Applications:
-- **Add:** Click `+ New Application`
-- **Edit:** Click the `✏️` (pencil) icon
-- **Delete:** Click the `🗑️` (trash) icon
-- **Track Status:** Drag and drop between columns
+- **Add:** Click `Add New` button
+- **Edit:** Click the `edit` button
+- **Delete:** Click the `delete` button
 
 ### 🤖 AI Resume Analysis:
 - Upload a **PDF/Word** resume
