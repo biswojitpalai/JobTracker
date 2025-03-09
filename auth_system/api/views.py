@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
-from rest_framework import generics, permissions
 from rest_framework.response import Response
 from rest_framework_simplejwt.views import TokenObtainPairView
 from .serializers import *
@@ -8,6 +7,16 @@ from rest_framework.decorators import api_view
 import google.generativeai as genai
 import os
 import json
+from rest_framework import generics, permissions
+from rest_framework.views import APIView
+import pdfplumber
+from docx import Document
+import io
+import requests
+import json
+from django.conf import settings
+from rest_framework.parsers import MultiPartParser, FormParser
+from rest_framework.throttling import UserRateThrottle
 
 class SignupView(generics.CreateAPIView):
     queryset = User.objects.all()
@@ -49,25 +58,6 @@ class JobApplicationRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView)
             return JobApplicationUpdateSerializer
         return JobApplicationSerializer
 
-
-
-
-
-# api/views.py
-from rest_framework import generics, permissions
-from rest_framework.response import Response
-from rest_framework.views import APIView
-from rest_framework_simplejwt.views import TokenObtainPairView
-from .serializers import UserSerializer
-from django.contrib.auth.models import User
-import pdfplumber
-from docx import Document
-import io
-import requests
-import json
-from django.conf import settings
-from rest_framework.parsers import MultiPartParser, FormParser
-from rest_framework.throttling import UserRateThrottle
 
 # Throttling for analysis endpoint
 class AnalysisThrottle(UserRateThrottle):
@@ -137,7 +127,7 @@ class ResumeAnalysisView(APIView):
 
             # Call Gemini API
             response = requests.post(
-                f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyCRsmZE-2fK0io9BnuLVWsjoxTC6dzCGp0",
+                f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=<your API Key>",
                 json={
                     "contents": [{
                         "parts": [{"text": prompt}]
