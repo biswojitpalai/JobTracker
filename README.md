@@ -1,4 +1,4 @@
-# JobTrack - AI-Powered Job Application Tracker
+# AI-Powered Job Application Tracker
 
 ## 🚀 Overview
 **JobTrack** is an AI-powered job application tracking system designed to help job seekers organize their job search efficiently. It provides a seamless experience for managing job applications, analyzing resumes using AI, and tracking progress with real-time insights.
