@@ -1,12 +1,11 @@
 # AI-Powered Job Application Tracker
 
 ## 🚀 Overview
-**JobTrack** is an AI-powered job application tracking system designed to help job seekers organize their job search efficiently. It provides a seamless experience for managing job applications, analyzing resumes using AI, and tracking progress with real-time insights.
+**JobTrack** is an AI-powered job application tracking system designed to help job seekers organize their job search efficiently. It provides a seamless experience for managing job applications, analyzing resumes using AI.
 
 ### 🔹 Why JobTrack?
 - **Stay Organized:** Keep track of job applications with a structured workflow.
 - **AI-Powered Insights:** Get instant resume analysis and job match scores.
-- **Real-Time Analytics:** Monitor application trends and identify key opportunities.
 
 ## 🏗️ Project UI/UX
   ![JobTrack Dashboard Preview](https://github.com/biswojitpalai/JobTracker/blob/main/images/homepage.png)
@@ -92,7 +91,6 @@ npm run dev
 ## 🌟 Key Features
 ✅ Secure **JWT Authentication**
 ✅ **PDF/Word Resume Parsing** & AI Analysis
-✅ **Real-Time statistics**
 ✅ **Responsive**
 
 ## 📚 API Documentation
@@ -117,8 +115,6 @@ http://localhost:8000/api/docs/
    ```
 5. **Open a Pull Request**
 
-## 📝 License
-This project is open-source under the **MIT License**.
 
 ---
 
